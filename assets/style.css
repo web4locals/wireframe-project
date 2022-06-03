@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.line-break {
+  display: inline-block;
+  width: auto;
+  height: 4px;
+}
+/*HEADER*/
+
+/*Navbar*/
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+/* MAIN CONTENT */
+.main {
+  display: none;
+}
+.welcome-back {
+  display: inline-block;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top, #000000a4, #0000009a),
+    url(./desk.jpg) no-repeat center;
+}
+.welcome-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 15vh;
+  padding: 15vh 15vw;
+  justify-content: center;
+  border-radius: 5vw;
+  width: 50vw;
+  background: rgba(255, 255, 255, 0.637);
+}
+
+.wbt {
+  font-family: "Dancing Script", cursive;
+  font-size: 8vw;
+  color: rgb(255, 217, 1);
+  text-shadow: 0 0 5px #ff0000;
+  padding: 1vh 1vw;
+}
+.wbp {
+  align-content: center;
+  font-size: x-large;
+  color: brown;
+  padding: 2vh 2vw;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  margin-left: 2vw;
+  width: 95vw;
+  row-gap: 15vh;
+  column-gap: 10vw;
+  grid-template-areas:
+    ". one . . . ."
+    ". one two two . ."
+    ". one . . . ."
+    ". . . . . .";
+
+  justify-content: center;
+}
+
+.grid-box-1 {
+  grid-area: one;
+}
+
+.grid-box-1 img {
+  width: 15em;
+  height: 20em;
+  border: black solid 1px;
+  border-radius: 8em;
+}
+.grid-box-1 h2 {
+  padding-top: 1em;
+  font-size: xx-large;
+  color: aqua;
+}
+.grid-box-1 li,
+a {
+  text-decoration: none;
+  color: #ff0000;
+  text-decoration: none;
+  list-style: none;
+}
+
+.grid-box-2 {
+  grid-area: two;
+}
+
+.grid-box-2 h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
+}
+
+@media only screen and (max-width: 650px) {
+  .grid-container {
+    display: grid;
+    margin-left: 5vw;
+    width: 90vw;
+    column-gap: 20vw;
+    row-gap: 10vh;
+    grid-template-areas:
+      ". one ."
+      ". two ."
+      ". . .";
+    height: auto;
+    align-items: center;
+  }
+}
+
+/*FOOTER*/
+
+.end {
+  display: block;
+  background-color: #333;
+  position: relative;
+  padding-top: 3em;
+}
+.end-text {
+    font-size: large;
+    color: #ddd;
+    text-align: center;
+    padding-bottom: 3em;
+}
